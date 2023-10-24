@@ -470,7 +470,7 @@ export class Model extends EventEmitter {
                 monitoredItem.on("changed", (dataValue: DataValue) => {
                     const fs = require('fs');
                     let msg = " value " + node.browseName + node.nodeId.toString() + " changed to " + dataValue.value.toString()
-                    fs.writeFile("./log", JSON.stringify(msg), null, function (err) {
+                    fs.writeFile("./log", JSON.stringify(msg), null, function (err: any) {
                         if (err) {
                             return console.log(err);
                         }
